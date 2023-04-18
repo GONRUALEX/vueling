@@ -1,0 +1,38 @@
+[
+  {
+    "key": "BCN",
+    "name": "Josep Tarradellas",
+    "country": "Spain",
+    "city": "Barcelona"
+  },
+  {
+    "key": "MAD",
+    "name": " Adolfo Suárez Madrid",
+    "country": "Spain",
+    "city": "Madrid"
+  },
+  {
+    "key": "FCO",
+    "name": "Fiumicino",
+    "country": "Italy",
+    "city": "Roma"
+  },
+  {
+    "key": "LHR",
+    "name": "Heathrow",
+    "country": "United Kindom",
+    "city": "London"
+  },
+  {
+    "key": "CDG",
+    "name": "Charles de Gaulle",
+    "country": "France",
+    "city": "Paris"
+  },
+  {
+    "key": "LIS",
+    "name": "Humberto Delgado",
+    "country": "Portugal",
+    "city": "Lisbon"
+  }
+]
