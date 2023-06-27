@@ -22,7 +22,6 @@ The responses from the server are already configured.
 ### Applicatión
 
 - Refactor the `airports-list-component` component so that all elements are reusable
-- Improve the current layout (styles)
 - Create a screen with the airport detail
 - Control navigation between screens
 - Implement unit test in some component and some service
@@ -31,6 +30,15 @@ The responses from the server are already configured.
   - LogOut
   - Access control to the page if it is logged
   - Add `securityKey` to requests to get access
+
+### Styles
+
+- It is required to display the page as shown in Figma
+  - https://www.figma.com/file/VDBOZy7QH7QJ3DrJTQqreQ/Frontend?type=design&node-id=0%3A1&mode=design&t=fRTdVhNihjBhTUgv-1
+  - Password: FrontTest23
+- The optimization of the HTML and CSS code and the use of techniques to lighten it will be valued
+- The encapsulation system and accessibility will be considered
+- Design the other pages based on the figma design
 
 *It will be valued that the application is accessible <br>
 *Any additional point to those required will be valued very positively
