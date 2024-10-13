@@ -1,0 +1,22 @@
+@use './variables/typography.scss' as typo;
+
+@mixin define-font-face($family, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: #{$family};
+    src: url('../assets/fonts/#{$file}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include define-font-face(typo.$main-family-black, 'Nunito-Black', 900, normal);
+@include define-font-face(typo.$main-family-black-italic, 'Nunito-BlackItalic', 900, italic);
+@include define-font-face(typo.$main-family-bold, 'Nunito-Bold', bold, normal);
+@include define-font-face(typo.$main-family-bold-italic, 'Nunito-BoldItalic', bold, italic);
+@include define-font-face(typo.$main-family-ligth, 'Nunito-ExtraLight', 300, normal);
+@include define-font-face(typo.$main-family-light-italic, 'Nunito-ExtraLightItalic', 300, italic);
+@include define-font-face(typo.$main-family-medium, 'Nunito-Medium', 500, normal);
+@include define-font-face(typo.$main-family-medium-italic, 'Nunito-MediumItalic', 500, italic);
+@include define-font-face(typo.$main-family-regular, 'Nunito-Regular', 400, normal);
+@include define-font-face(typo.$main-family-thin, 'Nunito-SemiBold', 100, normal);
+@include define-font-face(typo.$main-family-thin-italic, 'Nunito-SemiBoldItalic', 100, italic);

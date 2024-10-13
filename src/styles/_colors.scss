@@ -1,7 +1,13 @@
+@use '@angular/material' as mat;
+
+$custom-primary: mat.define-palette(mat.$red-palette);
+
+$custom-accent: mat.define-palette(mat.$yellow-palette);
+
+$custom-warn: mat.define-palette(mat.$blue-palette);
 
 $color-primary-a:                     #FFCC00;
-$color-primary-b: #eae0c3;
-
+$color-primary-b:                     #eae0c3;
 $color-white:                         #FFF;
 $gray-10:                             #F7F7F7;
 $gray-15:                             #F3F3F3;
@@ -12,7 +18,3 @@ $gray-45:                             #999;
 $gray-60:                             #4D4D4D; //color-primary-b
 $gray-75:                             #333; // color-primary-b--dark
 $color-black:                         #000;
-
-
-html, body { height: 100%; background: $gray-10}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

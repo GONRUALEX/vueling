@@ -1,0 +1,30 @@
+<mat-card class="airports-card" role="article" 
+  [attr.aria-labelledby]="'airport-title-{{airport.key}}'" 
+  [attr.aria-describedby]="'airport-description--{{airport.key}}'">
+  <img
+    mat-card-image
+    [src]="airport?.image"
+    alt="{{ airport?.name }} image"
+    class="airports-card__image"
+    aria-hidden="true" 
+  />
+  <mat-card-header class="airports-card__header">
+    <mat-card-title [attr.id]="'airport-title-{{airport.key}}'" class="airports-card__title">
+      {{ airport?.name }}
+    </mat-card-title>
+    <mat-card-subtitle [attr.id]="'airport-description-{{airport.key}}'" class="airports-card__subtitle">
+      {{ airport?.city }}, {{ airport?.country }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="airports-card__content">
+    <p>
+      <strong>Construido:</strong> {{ airport?.build }}
+    </p>
+    <p>
+      <strong>Propietario:</strong> {{ airport?.owner }}
+    </p>
+    <p>
+      <strong>Código:</strong> {{ airport?.key }}
+    </p>
+  </mat-card-content>
+</mat-card>

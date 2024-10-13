@@ -1,0 +1,28 @@
+@import "../../../../../styles/colors";
+.airports-card {
+    margin: 15px;
+    border-radius: 8px; 
+  
+    &__image {
+      height: 200px; 
+      object-fit: cover; 
+    }
+  
+    &__header {
+      background-color: $gray-10;
+      padding: 10px;
+    }
+  
+    &__title {
+      font-weight: bold; 
+    }
+  
+    &__subtitle {
+      font-size: 0.9em; 
+    }
+  
+    &__content {
+      padding: 10px; 
+      font-size: 0.95em; 
+    }
+}

@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:all:windows": "start cmd.exe /k \"color 0F && ng serve\" & start cmd.exe /k \"color 0F && stubby -s 1500 -l 127.0.0.1 -d stubbs/stubby.json -w\"",
+    "start:all:linux": "gnome-terminal -- bash -c \"echo -e '\\033[42;97m' && ng serve; exec bash\" & gnome-terminal -- bash -c \"echo -e '\\033[42;97m' && stubby -s 1500 -l 127.0.0.1 -d stubbs/stubby.json -w; exec bash\"",
     "ng:serve": "node_modules/.bin/ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -14,16 +16,17 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^13.0.0",
-    "@angular/cdk": "^13.0.0",
+    "@angular/cdk": "^13.3.9",
     "@angular/common": "^13.0.0",
     "@angular/compiler": "^13.0.0",
     "@angular/core": "^13.0.0",
     "@angular/forms": "^13.0.0",
     "@angular/localize": "^13.0.0",
-    "@angular/material": "^13.0.0",
+    "@angular/material": "^13.3.9",
     "@angular/platform-browser": "^13.0.0",
     "@angular/platform-browser-dynamic": "^13.0.0",
     "@angular/router": "^13.0.0",
+    "normalize.css": "^8.0.1",
     "rxjs": "^6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "^0.11.4"

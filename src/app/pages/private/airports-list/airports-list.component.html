@@ -1,0 +1,69 @@
+<div class="layout container">
+  <nav class="layout__menu">
+    <ul class="layout__menu-list">
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 1
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 2
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 3
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 4
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 5
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+      <li class="layout__menu-item">
+        <a href="#" class="layout__menu-link">
+          Menu Item 6
+          <mat-icon class="layout__menu-icon">chevron_right</mat-icon>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main class="layout__main">
+    <header class="layout__header">
+      <h1 class="layout__header-title">Lorem ipsum dolor sit amet</h1>
+    </header>
+    
+    <section class="layout__introduction">
+      <article class="layout__article">
+        <figure class="layout__article-figure">
+          <img src="assets/images/Img.svg" alt="Imagen pantalla aeropuerto " class="layout__article-image" />
+        </figure>
+        <p class="layout__article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec <strong>fringilla accumsan</strong>, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. <strong>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</strong>. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+        <p class="layout__article-text">Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. <strong>Aenean feugiat ex eu vestibulum vestibulum</strong>. Morbi a eleifend magna. Nam metus lacus, porttitor eu mauris a, blandit ultrices nibh.</p>
+      </article>
+    </section>
+
+    <section class="layout__content ">
+      <ng-container *ngIf="airportsList$ | async as airportsList; else loading">
+        <app-airports-list-render [airports]="airportsList" (airportClicked)="clickAirport($event)"></app-airports-list-render>
+      </ng-container>
+      <ng-template #loading>
+        <div class="layout__spinner">
+          <mat-spinner color="accent"></mat-spinner>
+        </div>
+      </ng-template>
+    </section>
+  </main>
+</div>

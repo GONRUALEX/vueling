@@ -1,0 +1,159 @@
+<section class="home" role="document">
+  <header class="home__header" role="banner">
+    <h1 class="home__title" aria-label="Título principal">Bienvenid@ a la prueba técnica de Vueling</h1>
+    <p class="home__subtitle" aria-label="Subtítulo informativo">A continuación expongo como está hecho el código y las razones escogidas.</p>
+  </header>
+
+  <main class="home__content container" role="main">
+    <section class="home__section home__section--info" aria-labelledby="html-section">
+      <h2 id="html-section" class="home__section-title">HTML</h2>
+      <p class="home__text">
+        Todo el html está hecho semánticamente ayudando a la mejora de la accesibilidad, SEO, mantenimiento del código, etc.
+      </p>
+    </section>
+    <section class="home__section home__section--info" aria-labelledby="css-section">
+      <h2 id="css-section" class="home__section-title">CSS</h2>
+      <p class="home__text">
+        Para el css se ha seguido una metodología BEM, aprovechando las características de scss. Se han creado en la raíz archivos para las fuentes, colores de la aplicación y se han definido como primary y accent para angular material los colores proporcionados por la primera versión del código para estandarizar la parte visual.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="errors-section">
+      <h2 id="errors-section" class="home__section-title">Errores</h2>
+      <p class="home__text">
+        Los errores se han centralizado, se usa un interceptor para su captura y su estado se maneja en un servicio.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="initializer-section">
+      <h2 id="initializer-section" class="home__section-title">Initzializer</h2>
+      <p class="home__text">
+        Para el manejo y persistencia de la sesión del usuario una vez iniciada la sesión al introducir usuario y contraseña se ha utilizado el localStorage manejado por un servicio, el inizializer es el encargado de comprobar si existe la key cuando se refresca la aplicación o se entra por primera vez.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="services-section">
+      <h2 id="services-section" class="home__section-title">Servicios</h2>
+      <p class="home__text">
+        Para el manejo del estado de la aplicación se han utilizado varios servicios.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="structure-section">
+      <h2 id="structure-section" class="home__section-title">Estructura</h2>
+      <p class="home__text">
+        La estructura se compone de 4 carpetas principales, expongo una breve descripción:
+      </p>
+      <ul>
+        <li>Core: contiene servicios, interceptores, guards, initzializer... Es importante que se manejen los determinados elementos usando el patrón singleton para que exista una única instancia de estos.</li>
+        <li>Layout: contiene los componentes estáticos de la aplicación, entre ellos header y footer.</li>
+        <li>Shared: contiene todos los elementos compartidos por toda la aplicación.</li>
+        <li>Pages: contiene las páginas de la aplicación.</li>
+      </ul>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="modules-section">
+      <h2 id="modules-section" class="home__section-title">Modulos</h2>
+      <p class="home__text">
+        La aplicación está modularizada, cada módulo se encarga de cargar los elementos de cada parte de la aplicación. Para las páginas se hace una carga perezosa de los módulos.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="alias-section">
+      <h2 id="alias-section" class="home__section-title">Alias</h2>
+      <p class="home__text">
+        Se han añadido Alias para cada una de las carpetas.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="config-section">
+      <h2 id="config-section" class="home__section-title">Archivo config</h2>
+      <p class="home__text">
+        Existe un archivo config encargado de tener todas las llamadas a la api, de esta manera se centraliza y controla todas las llamadas http de la aplicación.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="typing-section">
+      <h2 id="typing-section" class="home__section-title">Tipado</h2>
+      <p class="home__text">
+        Todos los datos se han tipado convenientemente.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="constants-section">
+      <h2 id="constants-section" class="home__section-title">Constantes</h2>
+      <p class="home__text">
+        Todas las constantes de la aplicación se han declarado en un archivo constants en la carpeta utils, de esta manera se evita hacer match a cadenas de texto sueltas, en otros casos se han utilizado tipos enumerados dependiendo de la casuistica.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="environments-section">
+      <h2 id="environments-section" class="home__section-title">Environments</h2>
+      <p class="home__text">
+        Existe un archivo general para los environments, de esta manera para las propiedades compartidas para los entornos no repetiremos tantas claves valor.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="http-calls-section">
+      <h2 id="http-calls-section" class="home__section-title">Llamadas Http</h2>
+      <p class="home__text">
+        Se ha creado una clase generica para poder reaprovecharla en la aplicación en el caso que existieran otras llamadas con otros tipos de datos.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="notification-system-section">
+      <h2 id="notification-system-section" class="home__section-title">Notificaciones</h2>
+      <p class="home__text">
+        Hay un sistema de notificaciones que utiliza angular material para sacar los mensajes tanto en caso de error como a la hora de saludar y despedirse en el momento de logearse o cerrar la sesión.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="local-execution-section">
+      <h2 id="local-execution-section" class="home__section-title">Ejecutar en local aplicación</h2>
+      <p class="home__text">
+        Para ejecutar en local la aplicación existe un script como se comentaba en la documentación, para ejecutar npm run start:all:windows en el caso de windows y npm run start:all:linux en el caso de linux, se abrirán dos terminales, una con la ejecución del servidor angular y otra con el servidor stubs.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="airport-detail-section">
+      <h2 id="airport-detail-section" class="home__section-title">Detalle aeropuerto</h2>
+      <p class="home__text">
+        Para ver el detalle del aeropuerto solo hay que pulsar en cualquiera de ellos, esto abre una modal con la información.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="tests-section">
+      <h2 id="tests-section" class="home__section-title">Test</h2>
+      <p class="home__text">
+        Se han completado los test de varios servicios y componentes.
+      </p>
+    </section>
+
+    <section class="home__section home__section--info" aria-labelledby="accessibility-section">
+      <h2 id="accessibility-section" class="home__section-title">Accesibilidad</h2>
+      <p class="home__text">
+        Además de html semántico se han añadido atributos ARIA para mejorar la accesibilidad.
+      </p>
+    </section>
+
+    <section class="home__section home__section--features" aria-labelledby="features-section">
+      <h2 id="features-section" class="home__section-title">Performance</h2>
+      <figure class="layout__article-figure">
+        <img src="assets/images/performance.png" width="100%" alt="Imagen pantalla aeropuerto " class="layout__article-image" />
+      </figure>
+      <p class="home__text">
+        La performance de la página a tratar tienes estos valores:
+      </p>
+      <ul class="home__features-list">
+        <li class="home__features-item"><strong>First Contentful Paint </strong>: 1.1 s</li>
+        <li class="home__features-item"><strong>Largest Contentful Paint </strong>: 2.0 s</li>
+        <li class="home__features-item"><strong>Total Blocking Time </strong>: no hay javascript bloqueante</li>
+        <li class="home__features-item"><strong>Cumulative Layout Shift </strong>: 0.004, hay algún layout shift se debería mirar con más calma con una conexión 3g para corregirlo</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="home__footer" role="contentinfo">
+    <p class="home__footer-text">Gracias por todo. Un saludo!!</p>
+  </footer>
+</section>

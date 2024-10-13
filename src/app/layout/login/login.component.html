@@ -1,0 +1,45 @@
+<div class="app-header__auth">
+  <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
+    <button
+      mat-button
+      class="app-header__auth-button app-header__auth-button--login"
+      (click)="openLoginDialog()"
+      aria-label="Iniciar Sesión"
+    >
+      <mat-icon class="app-header__icon" aria-hidden="true">login</mat-icon>
+      Iniciar Sesión
+    </button>
+  </ng-container>
+  <ng-template #loggedInTemplate>
+    <button
+      mat-button
+      class="app-header__auth-button app-header__auth-button--logout"
+      aria-label="Perfil de usuario"
+    >
+      <mat-icon
+        class="app-header__icon app-header__icon--top"
+        aria-hidden="true"
+      >
+        account_circle
+      </mat-icon>
+      {{ name() }}
+    </button>
+    |
+    <span
+      class="app-header__name"
+      role="button"
+      tabindex="0"
+      (click)="logout()"
+      aria-label="Cerrar Sesión"
+    >
+      Cerrar Sesión
+      <mat-icon
+        (click)="logout()"
+        class="app-header__auth-logout"
+        aria-hidden="true"
+      >
+        logout
+      </mat-icon>
+    </span>
+  </ng-template>
+</div>

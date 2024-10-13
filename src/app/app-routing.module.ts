@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {AirportsListComponent} from './airports-list/airports-list.component';
+import { AuthGuard } from '@core/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/airportsList',
-    pathMatch: 'full'
+    loadChildren: (): Promise<any> =>
+      import('./pages/public/home/home.module').then((m)=>m.HomeModule),
   },
   {
     path: 'airportsList',
-    component: AirportsListComponent
-  }
+    canActivate:[AuthGuard],
+    loadChildren: (): Promise<any> =>
+      import('./pages/private/airports-list/airports-list.module').then((m)=>m.AirportsListModule),
+  },
+  {path:'**', pathMatch: 'full', redirectTo: '/'},
 ];
 
 @NgModule({

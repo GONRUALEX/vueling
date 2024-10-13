@@ -1,0 +1,180 @@
+@use "./variables/typography.scss" as typo;
+@use "./colors" as colorBase;
+@import "~@angular/material/theming";
+@include mat-core();
+
+$colorBase: colorBase.$gray-60;
+$colorSecondary: colorBase.$color-primary-a;
+$primary: (
+  50: colorBase.$gray-10,
+  100: colorBase.$gray-15,
+  200: colorBase.$gray-18,
+  300: $colorBase,
+  400: colorBase.$gray-30,
+  500: $colorBase,
+  600: colorBase.$gray-75,
+  700: $colorBase,
+  800: colorBase.$color-black,
+  900: colorBase.$color-black,
+  A100: colorBase.$gray-10,
+  A200: colorBase.$gray-15,
+  A400: colorBase.$gray-30,
+  A700: $colorBase,
+  contrast: (
+    50: colorBase.$color-black,
+    100: colorBase.$color-black,
+    200: colorBase.$color-black,
+    300: colorBase.$color-black,
+    400: colorBase.$color-black,
+    500: colorBase.$color-white,
+    600: colorBase.$color-white,
+    700: colorBase.$color-white,
+    800: colorBase.$color-white,
+    900: colorBase.$color-white,
+    A100: colorBase.$color-black,
+    A200: colorBase.$color-black,
+    A400: colorBase.$color-black,
+    A700: colorBase.$color-white,
+  ),
+);
+$other: (
+  50: colorBase.$gray-10,
+  100: colorBase.$gray-15,
+  200: colorBase.$gray-18,
+  300: colorBase.$gray-20,
+  400: colorBase.$gray-30,
+  500: colorBase.$gray-45,
+  600: colorBase.$gray-60,
+  700: colorBase.$gray-75,
+  800: colorBase.$color-black,
+  900: colorBase.$color-black,
+  A100: colorBase.$gray-10,
+  A200: colorBase.$gray-15,
+  A400: colorBase.$gray-30,
+  A700: colorBase.$gray-75,
+  contrast: (
+    50: colorBase.$color-black,
+    100: colorBase.$color-black,
+    200: colorBase.$color-black,
+    300: colorBase.$color-black,
+    400: colorBase.$color-black,
+    500: colorBase.$color-white,
+    600: colorBase.$color-white,
+    700: colorBase.$color-white,
+    800: colorBase.$color-white,
+    900: colorBase.$color-white,
+    A100: colorBase.$color-black,
+    A200: colorBase.$color-black,
+    A400: colorBase.$color-black,
+    A700: colorBase.$color-white,
+  ),
+);
+
+$secondary: (
+  50: colorBase.$gray-10,
+  100: colorBase.$gray-15,
+  200: colorBase.$gray-18,
+  300: $colorSecondary,
+  400: colorBase.$gray-30,
+  500: $colorSecondary,
+  600: colorBase.$gray-60,
+  700: colorBase.$gray-75,
+  800: colorBase.$color-black,
+  900: colorBase.$color-black,
+  A100: colorBase.$gray-10,
+  A200: colorBase.$gray-15,
+  A400: colorBase.$gray-30,
+  A700: colorBase.$gray-75,
+  contrast: (
+    50: colorBase.$color-black,
+    100: colorBase.$color-black,
+    200: colorBase.$color-black,
+    300: colorBase.$color-black,
+    400: colorBase.$color-black,
+    500: colorBase.$color-white,
+    600: colorBase.$color-white,
+    700: colorBase.$color-white,
+    800: colorBase.$color-white,
+    900: colorBase.$color-white,
+    A100: colorBase.$color-black,
+    A200: colorBase.$color-black,
+    A400: colorBase.$color-black,
+    A700: colorBase.$color-white,
+  ),
+);
+
+$bv-palette-primary: mat-palette($primary);
+$bv-palette-accent: mat-palette($secondary);
+
+$bv-theme: mat-light-theme($bv-palette-primary, $bv-palette-accent);
+
+@include angular-material-theme($bv-theme);
+
+.mat-typography h1 {
+  font-size:24px;
+  font-family: typo.$main-family-bold;
+  font-weight: 700;
+  color: $gray-75;
+  line-height: 32px;
+}
+.mat-card-header .mat-card-title{
+  font-size:16px;
+  font-family: typo.$main-family-bold;
+  font-weight: 700;
+  color: $gray-75;
+  line-height: 21px;
+}
+
+.mat-card-subtitle{
+  font-size:12px;
+  font-family: typo.$main-family-regular;
+  font-weight: 700;
+  color: $gray-30;
+  line-height: 16px;
+}
+
+.mat-card-content{
+  font-size:12px;
+  font-family: typo.$main-family-bold;
+  font-weight: 700;
+  color: $gray-60;
+  line-height: 16px;
+  margin:0px;
+}
+.mat-headline,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline,
+.mat-typography,
+.mat-input-element,
+.mat-form-field,
+.mat-toolbar,
+.mat-toolbar h1,
+.mat-toolbar h2,
+.mat-toolbar h3,
+.mat-toolbar h4,
+.mat-toolbar h5,
+.mat-toolbar h6 {
+  font-family: typo.$main-family-regular;
+}
+
+body {
+  font-family: typo.$main-family-regular;
+  span, input{
+    font-family: typo.$main-family-regular;
+  }
+
+  .snackbar-error {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .snackbar-warning {
+    background-color: #ff9800;
+    color: white;
+  }
+
+  .snackbar-success {
+    background-color: #4caf50;
+    color: white;
+  }
+}

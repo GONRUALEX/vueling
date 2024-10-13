@@ -1,0 +1,32 @@
+<header class="app-container">
+  <mat-toolbar class="app-container__header" color="primary">
+    <div class="app-container__inner container">
+      <div class="app-container__left">
+        <button
+          *ngIf="isHome()"
+          class="app-container__button"
+          (click)="goBack()"
+        >
+          <mat-icon class="app-container__icon" aria-hidden="true">
+            arrow_back
+          </mat-icon>
+        </button>
+        <a
+          href="https://www.vueling.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Vueling"
+        >
+          <img
+            src="assets/logo/logo.svg"
+            alt="Logo de Vueling"
+            class="app-container__logo"
+          />
+        </a>
+      </div>
+      <div class="app-container__right">
+        <app-login></app-login>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>

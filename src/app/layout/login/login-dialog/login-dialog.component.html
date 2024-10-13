@@ -1,0 +1,78 @@
+<h2 mat-dialog-title class="app-login__title">Iniciar Sesión</h2>
+<form
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()"
+  class="app-login__form"
+  aria-labelledby="login-title"
+>
+  <mat-dialog-content class="app-login__content">
+    <div
+      role="group"
+      aria-labelledby="login-title"
+      class="app-login__form-group"
+    >
+      <mat-form-field appearance="fill" class="app-login__form-field">
+        <mat-label class="app-login__label">Usuario</mat-label>
+        <input
+          matInput
+          formControlName="username"
+          required
+          class="app-login__input"
+          aria-required="true"
+          aria-describedby="username-error"
+        />
+
+        <mat-error
+          *ngIf="loginForm.get('username')?.hasError('required')"
+          id="username-error"
+          class="app-login__error"
+        >
+          El usuario es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="app-login__form-field">
+        <mat-label class="app-login__label">Contraseña</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          required
+          class="app-login__input"
+          aria-required="true"
+          aria-describedby="password-error"
+        />
+
+        <mat-error
+          *ngIf="loginForm.get('password')?.hasError('required')"
+          id="password-error"
+          class="app-login__error"
+        >
+          La contraseña es obligatoria.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="app-login__actions">
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      class="app-login__button app-login__button--submit"
+      aria-label="Iniciar sesión"
+    >
+      Iniciar Sesión
+    </button>
+
+    <button
+      mat-raised-button
+      mat-dialog-close
+      color="accent"
+      class="app-login__button app-login__button--cancel"
+      aria-label="Cancelar"
+    >
+      Cancelar
+    </button>
+  </mat-dialog-actions>
+</form>

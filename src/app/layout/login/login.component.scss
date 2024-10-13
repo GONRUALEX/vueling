@@ -1,0 +1,31 @@
+.app-header {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    padding-right: 10px;
+
+    &--top {
+      padding-right: 10px;
+    }
+  }
+
+  &__auth-button {
+    font-size: 12px;
+
+    &--login {
+      padding-right: 10px;
+    }
+  }
+
+  &__auth-logout {
+    transform: translateY(6px);
+    padding-left: 10px;
+  }
+
+  &__name {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+  }
+}

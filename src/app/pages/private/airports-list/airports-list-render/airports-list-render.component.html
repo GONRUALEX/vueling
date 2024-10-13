@@ -1,0 +1,23 @@
+<article class="airports-list">
+  <mat-card 
+    class="airports-list__card" 
+    *ngFor="let airport of airports; trackBy: trackByAirports" 
+    (click)="onClickAirport(airport.key)"
+    role="article" 
+    aria-labelledby="airport-title" 
+    aria-describedby="airport-description"
+  >
+    <mat-card-header class="airports-list__card-header">
+      <mat-card-title id="airport-title" class="airports-list__card-title">
+        {{ airport.name }}
+      </mat-card-title>
+      <mat-card-subtitle id="airport-description" class="airports-list__card-subtitle">
+        {{ airport.key }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="airports-list__card-content">
+      <p class="airports-list__text">Ciudad: {{ airport.city }}</p>
+      <p class="airports-list__text">País: {{ airport.country }}</p>
+    </mat-card-content>
+  </mat-card>
+</article>

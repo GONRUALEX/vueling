@@ -1,0 +1,46 @@
+.app-login {
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__form-field {
+    display: inherit;
+  }
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &__input {
+    font-size: 16px;
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    min-width: 150px;
+
+    &--submit {
+    }
+
+    &--cancel {
+    }
+  }
+}
